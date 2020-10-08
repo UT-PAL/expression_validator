@@ -47,7 +47,7 @@ else{
     <b> ex-2314 </b>
     ! `;
 }}
-   
+  e.preventDefault();
 });
 
 //eamil validator
@@ -63,6 +63,7 @@ form1.addEventListener('submit',e=>{
                 <b>ex- someone111@gamil.com </b>
                 ! `;
     }}
+     e.preventDefault();
 });
 
 
@@ -78,4 +79,5 @@ form2.addEventListener('submit',e=>{
                 <b>ex- 8801724412345 </b>
                 ! `;
     }}
+     e.preventDefault();
 });
