@@ -40,10 +40,10 @@ let v = new validator(postcode.value);
      result=   d.test(postcode.value);
     
 if(result == true){
-p.innerHTML=`${postcode.value} is valid ! `;
+p.innerHTML+=`${postcode.value} is valid ! `;
 }
 else{
-    p.innerHTML=`${postcode.value} is invalid postcode 
+    p.innerHTML+=`${postcode.value} is invalid postcode 
     <b> ex-2314 </b>
     ! `;
 }}
@@ -56,10 +56,10 @@ form1.addEventListener('submit',e=>{
     if(email.value != ''){
         result = k.test(email.value);
         if(result == true){
-            alert1.innerHTML=`${email.value} is valid ! `;
+            alert1.innerHTML+=`${email.value} is valid ! `;
             }
             else{
-            alert1.innerHTML=`${email.value} is invalid email
+            alert1.innerHTML+=`${email.value} is invalid email
                 <b>ex- someone111@gamil.com </b>
                 ! `;
     }}
@@ -72,10 +72,10 @@ form2.addEventListener('submit',e=>{
     if(phone.value != ''){
         result = n.test(phone.value);
         if(result == true){
-            alert2.innerHTML=`${phone.value} is valid ! `;
+            alert2.innerHTML+=`${phone.value} is valid ! `;
             }
             else{
-            alert2.innerHTML=`${phone.value} is invalid phone number
+            alert2.innerHTML+=`${phone.value} is invalid phone number
                 <b>ex- 8801724412345 </b>
                 ! `;
     }}
