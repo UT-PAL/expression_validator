@@ -32,7 +32,7 @@ class validator{
 }
 
 form.addEventListener('submit',e=>{
-    
+    p.innerHTML = '';
     
 let v = new validator(postcode.value);
     
@@ -40,7 +40,7 @@ let v = new validator(postcode.value);
      result=   d.test(postcode.value);
     
 if(result == true){
-    p.innerHTML = '';
+    
 p.innerHTML=`${postcode.value} is valid ! `;
 }
 else{
@@ -54,12 +54,12 @@ else{
 //eamil validator
    
 form1.addEventListener('submit',e=>{
-    
+    alert1.innerHTML = '';
   
     if(email.value != ''){
         result = k.test(email.value);
         if(result == true){
-              alert1.innerHTML = '';
+              
             alert1.innerHTML=`${email.value} is valid ! `;
             }
             else{
@@ -73,15 +73,15 @@ form1.addEventListener('submit',e=>{
 
 //phone number validator 
 form2.addEventListener('submit',e=>{
-     
+     alert2.innerHTML = '';
     if(phone.value != ''){
         result = n.test(phone.value);
         if(result == true){
-            alert2.innerHTML = '';
+            
             alert2.innerHTML=`${phone.value} is valid ! `;
             }
             else{
-                alert2.innerHTML = '';
+                
             alert2.innerHTML=`${phone.value} is invalid phone number
                 <b>ex- 8801724412345 </b>
                 ! `;
