@@ -33,7 +33,7 @@ class validator{
 
 form.addEventListener('submit',e=>{
     
-    
+    p.innerHTML = '';
 let v = new validator(postcode.value);
     
     if(postcode.value !=''){
@@ -53,6 +53,8 @@ else{
 //eamil validator
    
 form1.addEventListener('submit',e=>{
+    
+    alert1.innerHTML = '';
     if(email.value != ''){
         result = k.test(email.value);
         if(result == true){
@@ -69,6 +71,7 @@ form1.addEventListener('submit',e=>{
 
 //phone number validator 
 form2.addEventListener('submit',e=>{
+     alert2.innerHTML = '';
     if(phone.value != ''){
         result = n.test(phone.value);
         if(result == true){
