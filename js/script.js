@@ -19,7 +19,7 @@ let d= /^[0-9]{4}$/;
 let k=/^([a-zA-Z0-9])+@([a-zA-Z0-9])+[\.?]com$/;
 let n=/^(\+88)?([0-9]){11}$/;
 
-let arr=[];
+
 let result=0;
 
 class validator{
@@ -41,12 +41,16 @@ let v = new validator(postcode.value);
     
 if(result == true){
     
-p.innerHTML=`${postcode.value} is valid ! `;
+ p.innerHTML = `
+       <p class="alert alert-success">
+            ${postcode.value} is valid !</p>  `;
 }
 else{
-    p.innerHTML=`${postcode.value} is invalid postcode 
+    p.innerHTML = `
+            <p class="alert alert-danger">
+            ${postcode.value} is invalid postcode 
     <b> ex-2314 </b>
-    ! `;
+    ! </p>`;
 }}
   e.preventDefault();
 });
@@ -60,12 +64,16 @@ form1.addEventListener('submit',e=>{
         result = k.test(email.value);
         if(result == true){
               
-            alert1.innerHTML=`${email.value} is valid ! `;
+             alert1.innerHTML = `
+            <p class="alert alert-success">
+            ${email.value} is valid ! </p>`;
             }
             else{
-            alert1.innerHTML=`${email.value} is invalid email
+             alert1.innerHTML = `
+            <p class="alert alert-danger">
+            ${email.value} is invalid email
                 <b>ex- someone111@gamil.com </b>
-                ! `;
+                !</p> `;
     }}
      e.preventDefault();
 });
@@ -78,13 +86,17 @@ form2.addEventListener('submit',e=>{
         result = n.test(phone.value);
         if(result == true){
             
-            alert2.innerHTML=`${phone.value} is valid ! `;
+            alert2.innerHTML = `
+            <p class="alert alert-success">
+            ${phone.value} is valid ! </p>`;
             }
             else{
                 
-            alert2.innerHTML=`${phone.value} is invalid phone number
-                <b>ex- 8801724412345 </b>
-                ! `;
+             alert2.innerHTML = `
+            <p class="alert alert-danger">
+            ${phone.value} is invalid phone number
+                <b>ex- 8801728412345 </b>
+                ! </p>`;
     }}
      e.preventDefault();
 });
